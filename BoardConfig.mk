@@ -10,7 +10,7 @@ include vendor/xiaomi/redwood-miuicamera/vendor/BoardConfigVendor.mk
 MIUICAMERA_PATH := vendor/xiaomi/redwood-miuicamera
 
 # Camera
-TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
+$(call soong_config_set,camera,override_format_from_reserved,$(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED))
 
 # Properties
 TARGET_SYSTEM_PROP += $(MIUICAMERA_PATH)/system.prop
